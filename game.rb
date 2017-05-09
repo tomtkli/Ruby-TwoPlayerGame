@@ -12,8 +12,10 @@ class Game
   
   def subtract_life
     @current_player.life -= 1
-    puts "#{@current_player.name}, you lose!" if @current_player.life == 0
-    puts "--- GAME OVER ---"
+    if @current_player.life == 0
+      puts "#{@current_player.name}, you lose!" 
+      puts "--- GAME OVER ---"
+    end
   end
 
   def report_life
